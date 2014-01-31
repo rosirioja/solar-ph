@@ -1,0 +1,145 @@
+body {
+	background: #DDEAF3;
+	overflow-x: hidden;
+	position: relative;
+	box-shadow: 0 -3px 5px #000000;
+}
+
+.whole{
+	
+	padding: 50px 0px 50px 0px;
+
+}
+
+.span-box {
+	padding: 0px 0px 15px 15px;
+}
+
+.span-box1 {
+	padding: 0px 15px 15px 0px;
+}
+.pad1 {
+	box-shadow: -3px 3px 5px #000000; 
+}
+
+.header {
+	background: #343838;
+	box-shadow: 0px 3px 5px #000000; 
+}
+
+.row-status {
+	box-shadow: 0 3px 5px #000000;
+}
+
+.row-report a {
+	color: #000000;
+}
+
+a, .copyright, blockquote {
+		color: #FFFFFF;
+}
+
+.header-right {
+	padding-top: 30px;
+}
+
+.header-left{
+	padding: 10px 0 0 30px;
+}
+
+.header-user{
+	padding: 10px 10px 10px 0;
+}
+
+
+.current {
+	background:url(../images/bg_top3_repeat.jpg) top center repeat-x; 
+	margin-left: -120px;
+}
+
+.letterS{
+	padding: 10px 0 0 50px;
+	float: left;
+}
+
+.status{
+	padding: 0 0 0 100px;
+}
+
+.watt{
+	padding: 0 0 0px 150px;
+	margin: -5px 0 -5px 0;
+}
+
+.box1_bot {
+	background: #EEEEEE;
+}
+
+.box1_top {
+	background: #9FD7D7;
+	width:100%;
+}
+
+
+.title{
+	font-size:24px;
+	color: #053F47;
+	padding: 5px 0 0px 110px;
+	margin: 0 0 10px 0;
+}
+
+img  {
+	width:40px; 
+	height: 40px; 
+}
+
+img#letter {
+	width: 100px;
+	height: 85px;
+}
+
+#sp-graph, #bb-graph {
+	padding: 5px 0 5px 0;
+	overflow: hidden;
+}
+
+.mode {
+	padding: 10px 0 10px 20px;
+}
+
+.content {
+	padding: 10px 0 0 80px;
+}
+
+.connection {
+	padding: 10px 0 0 0;
+}
+
+.legend {
+	padding: 10px 0 10px 0px;
+}
+
+.button {
+	padding: 0 0 10px 280px;
+}
+
+.footer {
+	background: #343838;
+	box-shadow: 0px -3px 5px #000000;
+}
+
+.links {
+	padding: 20px 30px 0 0px;
+}
+
+.copyright {
+	padding: 30px 0 0 30px;
+}
+
+.row-graph, .row-report {
+	padding: 20px 0 20px 0;
+}
+
+tr:hover {
+	color: #0099D3;
+}
