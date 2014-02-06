@@ -77,6 +77,13 @@
 			?>
 		</div>
 
+<?php
+	/*foreach ($data2 as $row) {
+		# code...
+		echo $row->resultarr['0']['0'];
+	}*/
+	var_dump($data2);
+?>
 		<!-- graph -->
 		<div class="graph-div">
 			<canvas id="canvas" height="450" width="600"></canvas>

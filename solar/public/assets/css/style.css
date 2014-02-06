@@ -143,3 +143,19 @@ img#letter {
 tr:hover {
 	color: #0099D3;
 }
+
+.row-graph1 {
+	padding: 15px 0 0 0;
+}
+.row-justgraph {
+	width: 400px;
+	padding: 15px 0 0 5px;
+}
+
+.ok-div{
+	padding: 20px 40px 0 0px;
+}
+
+section{
+	padding: 10px 0 10px 0;
+}

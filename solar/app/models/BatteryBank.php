@@ -8,8 +8,7 @@
 			$result = DB::table('batterybank')
 							->select('*')
 							->where('userid', $userid)
-							/*->where('date', $date)*/
-							->where('date', '2014-01-29')
+							->where('date', $date)
 							->get();
 			return $result;
 		}
@@ -24,5 +23,16 @@
 
 		}
 
+			public function getReports($userid, $datefrom, $dateto){
+			$result = DB::table('batterybank')
+						->select('*')
+						->where('userid', $userid)
+						->whereBetween('date', array($datefrom, $dateto))
+						->orderby('id')
+						->get();
+			return $result;
+		}
+		
+	
 	}
 ?>

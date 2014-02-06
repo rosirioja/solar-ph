@@ -44,5 +44,38 @@ class HomeController extends \BaseController {
 
 		}
 	}
+	
+	public function getSpgraph() {
+			date_default_timezone_set('Asia/Manila');
+			
+			$userid = Session::get('userid');
+			$username = Session::get('username');
+			/*$date = date('Y-m-d');*/
+			$date = "2014-02-02";
+			$loginstatus = true;
+
+			//displays data to body
+			$getdata = new SolarPanel;
+			$spdata = $getdata->getdatabyhour($userid, $date);
+			return View::make("landing.graphsolarpanel")->with(array("data1"=>$spdata));
+			
+	}
+
+	public function getBbgraph() {
+			date_default_timezone_set('Asia/Manila');
+			
+			$userid = Session::get('userid');
+			$username = Session::get('username');
+			/*$date = date('Y-m-d');*/
+			$date = "2014-02-02";
+			$loginstatus = true;
+
+			//displays data to body
+			$getdata = new BatteryBank;
+			$bbdata = $getdata->getdatabyhour($userid, $date);
+			 return View::make("landing.graphbatterybank")->with(array("data1"=>$bbdata));
+			
+	}
+
 
 }

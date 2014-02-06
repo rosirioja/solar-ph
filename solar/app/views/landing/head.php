@@ -28,7 +28,6 @@
 				<li><a href="/batterybank">Battery Banks</a></li>
 				<li><a href="/report">Report</a></li>
 				<li><a href="/aboutus">About Us</a></li>
-				<li><a href="/settings">Settings</a></li>
 				</ul>
 			</div>
 		</div>

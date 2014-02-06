@@ -13,7 +13,14 @@ class SolarPanelController extends \BaseController {
 		if (Session::has('userid')){
 			$userid = Session::get('userid');
 			$username = Session::get('username');
-			$date = date('Y-m-d');
+			date_default_timezone_set('Asia/Manila');
+			/*$date = date('Y-m-d');*/
+			$date = "2014-02-02";
+			$year = date('Y', strtotime($date));
+			$month = date('n', strtotime($date));
+			$week = date('W', strtotime($date));
+			$day = date('N', strtotime($date));
+			
 			$loginstatus = true;
 
 			//contains user information
@@ -25,7 +32,11 @@ class SolarPanelController extends \BaseController {
 			//displays data to body
 			$getdata = new SolarPanel;
 			$spdata = $getdata->getdatabyhour($userid, $date);
-			$this->layout->body = View::make("landing.solarpanel")->with(array("data1"=>$spdata));
+			
+			$getweekdata = new SolarPanel;
+			$weekdata = $getweekdata->getWeekChart($userid, $year, $month, $week);
+
+			$this->layout->body = View::make("landing.solarpanel")->with(array("data1"=>$spdata, "data2"=>$weekdata));
 			
 			//displays data to footer
 			$this->layout->foot = View::make("landing.foot");

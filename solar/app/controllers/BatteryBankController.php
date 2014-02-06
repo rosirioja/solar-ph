@@ -15,8 +15,14 @@ class BatteryBankController extends \BaseController {
 			
 			$userid = Session::get('userid');
 			$username = Session::get('username');
-			$date = date('Y-m-d');
-			//$date = "2013-12-11";
+			date_default_timezone_set('Asia/Manila');
+			/*$date = date('Y-m-d');*/
+			$date = "2014-02-02";
+			$year = date('Y', strtotime($date));
+			$month = date('n', strtotime($date));
+			$week = date('W', strtotime($date));
+			$day = date('N', strtotime($date));
+			
 			$loginstatus = true;
 
 			//contains user information

@@ -42,8 +42,9 @@
 								&nbsp;<b>Solar Panel</b>
 							</div>						
 						</div>
+						<center>
 						<img src="assets/images/sun.png">
-						Wattage Rating: <?php echo $power; ?>W
+						Wattage Rating: <?php echo number_format($power, 2, '.', ''); ?>W
 						<img src=
 						<?php 
 							if($temp <= 15){
@@ -60,8 +61,9 @@
 							}
 						?>
 						>
-						Temperature: <?php echo $temp; ?>&deg;C <br/>
-						<div class="sp-graph">magload ka nman</div>
+						Temperature: <?php echo number_format($temp, 2, '.', ''); ?>&deg;C <br/>
+						</center>
+						<div class="sp-graph"></div>
 						<!-- corrent href -->
 						<div class="button">
 							<a href="/solarpanel" class="btn btn-info btn-med"><i class="icon-zoom-in"></i> Larger View</a>
@@ -99,6 +101,7 @@
 								</div>												
 							</div>
 							<!-- correct image and values -->	
+							<center>
 							<img src=
 							<?php
 								if($voltage <= 25){
@@ -112,11 +115,13 @@
 								}
 							?>
 							>
-							Percentage: <?php echo $voltage; ?>% 
+							Percentage: <?php echo number_format($voltage, 2, '.', ''); ?>% 
+							&nbsp;
 							<img id="power" src="assets/images/power.png">
-							Power Accumulated: <?php echo $power; ?>W <br/>
-							<div id="bb-graph" class="wrapper">
+							Power Accumulated: <?php echo number_format($power, 2, '.', ''); ?>W <br/>
+							<div class="bb-graph" class="wrapper">
 							</div>
+							</center>
 							<!-- correct href -->
 							<div class="button">
 								<a href="/batterybank" class="btn btn-info btn-med"><i class="icon-zoom-in"></i> Larger View</a>
@@ -189,7 +194,7 @@
 								<img src=<?php echo $manual; ?>>&nbsp;
 								Manual 
 							</div>
-							<div class="span6 connection">
+							<div class="disabled span6 connection">
 								<img src=<?php echo $spccpic; ?>>&nbsp; 
 								SP-CC Connection<br/>
 								<img src=<?php echo $bbloadpic; ?>>&nbsp;
@@ -217,20 +222,10 @@
 <!-- SHOULD BE ABLE TO LOAD GRAPHS! -->
 <script type="text/javascript">
 	$(document).ready(function(){
-		
-		$('.sp-graph').on('load', function(){
-		 alert("rosi graph");
+		$(".sp-graph").load("/spgraph");
+		$(".bb-graph").load("/bbgraph");
 
-		});
 
-		/*$('#sp-graph').load('{{ URL::route("spgraph") }}');*/
-	/*	$('#sp-graph').click(function(e){
-    $.ajax({
-      url: "spgraph",
-      context: document.body
-    }).done(function(fragment) { 
-      $("#sp-graph").html(fragment);
-    });
-});*/
+	
 	});
 </script>
